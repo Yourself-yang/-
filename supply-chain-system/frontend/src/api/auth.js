@@ -1,0 +1,17 @@
+import request from '@/utils/request'
+
+export function login(data) {
+  return request({ url: '/v1/auth/login', method: 'post', data })
+}
+
+export function logout() {
+  return request({ url: '/v1/auth/logout', method: 'post' })
+}
+
+export function getInfo() {
+  return request({ url: '/v1/auth/info', method: 'get' })
+}
+
+export function changePassword(data) {
+  return request({ url: '/v1/auth/password', method: 'put', data })
+}

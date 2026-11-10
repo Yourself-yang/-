@@ -1,0 +1,78 @@
+智能电商微服务供应链管理系统
+系统配置文档
+
+一、硬件环境简介
+
+本系统采用 Spring Cloud 微服务架构，基于 Docker 容器化部署。程序运行时
+需同时承载 MySQL、Redis、Nacos 注册配置中心、服务网关、6 个业务微服务、
+AI 智能分析服务以及前端 Web 服务等十余个容器实例，对硬件内存与 CPU 有一
+定要求。
+
+1. 开发环境硬件要求
+   处理器：Intel Core i5 / AMD Ryzen 5 及以上，建议 6 核 12 线程
+   内存：16 GB 及以上（需同时运行 Docker 多容器与前后端开发工具）
+   硬盘：50 GB 及以上可用空间（存放 Docker 镜像、数据库数据卷与各类依赖）
+   网络：可访问互联网（用于拉取 Maven、npm、pip 依赖与 Docker 镜像）
+
+2. 运行/部署环境硬件要求
+   处理器：4 核及以上
+   内存：8 GB 及以上
+   硬盘：20 GB 及以上可用空间
+
+二、软件开发环境简介
+
+1. 操作系统
+   开发环境：Windows 10 / 11（64 位）
+   部署环境：Linux（CentOS / Ubuntu）或 Windows + Docker Desktop
+
+2. 数据库
+   关系型数据库：MySQL 8.0（utf8mb4 字符集，数据卷持久化）
+   缓存数据库：Redis 7.0（用于会话、验证码及热点数据缓存）
+
+3. 后端开发环境
+   开发语言 / 运行时：Java 17（JDK 17）
+   Web 框架：Spring Boot 3.2.5
+   微服务框架：Spring Cloud 2023.0.1 + Spring Cloud Alibaba 2023.0.1.0
+   服务注册与配置中心：Nacos 2.3.2
+   服务网关：Spring Cloud Gateway
+   ORM 框架：MyBatis-Plus 3.5.5
+   数据库连接池：Druid 1.2.20
+   身份认证：JWT（jjwt 0.12.5）
+   工具类库：Hutool 5.8.26
+   构建工具：Maven 3.x
+
+4. 前端开发环境
+   运行时：Node.js 20
+   前端框架：Vue.js 3.4
+   路由：Vue Router 4.3
+   状态管理：Pinia 2.1
+   UI 组件库：Element Plus 2.7
+   HTTP 请求：Axios 1.6
+   数据可视化：ECharts 5.5
+   构建工具：Vite 5.2
+   样式预处理器：Sass
+
+5. AI 智能分析服务
+   开发语言：Python 3.10
+   Web 框架：FastAPI 0.110
+   服务器：Uvicorn
+   ORM 与数据库驱动：SQLAlchemy + PyMySQL
+   数据科学库：NumPy、Pandas、scikit-learn
+
+6. 集成开发环境（IDE）
+   后端开发：IntelliJ IDEA
+   前端开发：Visual Studio Code
+
+7. 浏览器
+   Chrome / Edge（推荐最新版本）
+
+8. 接口测试工具
+   Postman / Apifox
+
+9. 项目管理与部署工具
+   版本控制：Git
+   容器化：Docker + Docker Compose
+   Web 服务器：Nginx（前端静态资源部署与反向代理）
+
+10. 系统部署地址
+    本系统目前为本地 / 内网环境部署，尚未公开发布，暂无可对外访问的链接地址。

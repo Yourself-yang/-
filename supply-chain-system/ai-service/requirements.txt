@@ -1,0 +1,12 @@
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+sqlalchemy==2.0.29
+pymysql==1.1.0
+pymysql[rsa]
+cryptography==42.0.5
+pydantic==2.6.4
+pydantic-settings==2.2.1
+numpy==1.26.4
+scikit-learn==1.4.2
+pandas==2.2.1
+python-multipart==0.0.9
